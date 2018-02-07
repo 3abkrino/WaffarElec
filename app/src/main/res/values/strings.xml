@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">WaffarlyElec</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="home_page">الرئيسية</string>
+    <string name="waffarly_alert">Waffarly Alert</string>
+    <string name="my_account">حسابي</string>
+    <string name="consumption_past">الأستهلاك السابق</string>
+    <string name="consumption_now">أستهلاكي الحالي</string>
+    <string name="advice_for_consumption">نصايح ترشيد الأستهلاك</string>
+    <string name="ads">عروض</string>
+    <string name="logout">خروج</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="settings">الاعدادات</string>
+</resources>

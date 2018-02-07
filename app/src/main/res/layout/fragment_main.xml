@@ -1,0 +1,119 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:gauge="http://schemas.android.com/apk/res-auto"
+    tools:context="com.androidapp.waffarlyelec.fragments.MainFragment"
+    android:background="@color/colorBackSpace">
+
+    <com.androidapp.waffarlyelec.views.CustomTextView
+        android:id="@+id/main_title_textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="معدل الاستهلاك"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/main_chart_layout"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:padding="8dp"
+        android:background="@color/colorAccent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/main_title_textView">
+
+        <de.nitri.gauge.Gauge
+            android:id="@+id/gauge"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_centerInParent="true"
+            gauge:initialValue="50"
+            gauge:maxValue="100"
+            gauge:minValue="0"
+            gauge:totalNicks="100"
+            gauge:valuePerNick="1" />
+
+        <!--<com.jjoe64.graphview.GraphView-->
+            <!--android:id="@+id/graph"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content" />-->
+
+    </RelativeLayout>
+
+    <com.androidapp.waffarlyelec.views.CustomTextView
+        android:id="@+id/main_conNow_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="32dp"
+        android:text="استهلاكك الحالي"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_chart_layout" />
+
+    <com.androidapp.waffarlyelec.views.CustomTextView
+        android:id="@+id/main_conNowValue_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="00.00"
+        app:layout_constraintBottom_toBottomOf="@+id/main_conNow_textView"
+        app:layout_constraintEnd_toStartOf="@+id/main_conNow_textView"
+        app:layout_constraintTop_toTopOf="@+id/main_conNow_textView" />
+
+    <com.androidapp.waffarlyelec.views.CustomTextView
+        android:id="@+id/main_conUntil_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:text="المتبقي على الشريحة الاعلى"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_conNow_textView" />
+
+    <com.androidapp.waffarlyelec.views.CustomTextView
+        android:id="@+id/main_conUntilValue_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="00.00"
+        app:layout_constraintBottom_toBottomOf="@+id/main_conUntil_textView"
+        app:layout_constraintEnd_toStartOf="@+id/main_conUntil_textView"
+        app:layout_constraintTop_toTopOf="@+id/main_conUntil_textView" />
+
+    <com.androidapp.waffarlyelec.views.CustomTextView
+        android:id="@+id/main_price_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:text="المبلغ المتوقع للفاتورة"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_conUntil_textView" />
+
+    <com.androidapp.waffarlyelec.views.CustomTextView
+        android:id="@+id/main_priceValue_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="00.00"
+        app:layout_constraintBottom_toBottomOf="@+id/main_price_textView"
+        app:layout_constraintEnd_toStartOf="@+id/main_price_textView"
+        app:layout_constraintTop_toTopOf="@+id/main_price_textView" />
+
+</android.support.constraint.ConstraintLayout>
